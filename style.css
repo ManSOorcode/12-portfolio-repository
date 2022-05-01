@@ -1,0 +1,394 @@
+@import url("https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@100;200;300;400;500;600;700;800;900&family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap");
+
+* {
+	padding: 0;
+	margin: 0;
+	font-family: "Source Sans Pro", sans-serif;
+}
+body {
+	background: url(https://images.pexels.com/photos/3297593/pexels-photo-3297593.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1);
+	background-size: cover;
+	background-repeat: no-repeat;
+	-ms-overflow-style: none; /*IE and edge*/
+	scrollbar-width: none; /*firefox*/
+}
+body::-webkit-scrollbar {
+	/* chrome,safari,IE */
+	display: none;
+}
+h1,
+h2 {
+	font-size: 45px;
+	font-weight: 700;
+}
+.container {
+	max-width: 1200px;
+	margin: 0 auto;
+	padding: 0 20px;
+}
+
+/*-----header-------*/
+#navbar {
+	width: 100%;
+	background: #dcdcdc;
+
+	position: fixed;
+	top: 0;
+	left: 0;
+	right: 0;
+
+	border-bottom: 2px solid #fff0f5;
+
+	z-index: 5;
+}
+
+.nav-content {
+	display: flex;
+	align-items: center;
+
+	max-width: auto;
+}
+.nav-content .logo {
+	display: flex;
+	width: 15%;
+}
+.nav-content .logo img {
+	width: auto;
+}
+.nav-content ul {
+	display: flex;
+	justify-content: flex-end;
+	width: 85%;
+
+	font-size: 20px;
+	font-weight: 700;
+
+	list-style-type: none;
+
+	padding: 0;
+}
+.nav-content ul li {
+	display: inline-block;
+
+	margin-right: 10px;
+	position: relative;
+}
+.nav-content ul li:last-child {
+	margin-right: 0;
+}
+.nav-content ul li a {
+	text-decoration: none;
+
+	color: #0000ff;
+
+	transition: 0.5s;
+}
+.nav-content ul li::after{
+	content: "";
+	height: 3px;
+	
+	background: #333;
+	position: absolute;
+	top:30px;
+	left: 0px;
+	right: 0px;
+	bottom: 0;
+	
+	transform: scale(0,1);
+
+	transition: transform 400ms ease-in-out;
+	
+}
+
+.nav-content ul li:hover::after {
+	
+	transform-origin: left;
+	transform: scale(1,1);
+}
+.nav-content ul li a:hover {
+	color: #000;
+}
+/*------welcome---------*/
+#welcome-section {
+	width: 100%;
+	min-height: 100vh;
+
+	display: flex;
+	align-items: center;
+
+	color: #b22222;
+}
+
+#welcome-section h1 {
+	font-size: 4em;
+	pointer-events: none;
+}
+
+#welcome-section:hover {
+	color: #fff;
+	background: linear-gradient(45deg, green 10%, #9ddf05 30%, #ffc505 70%);
+}
+
+/*-----------projects------------*/
+#projects {
+	display: flex;
+	align-items: center;
+
+	min-height: 100vh;
+
+	padding: 40px 0;
+
+	background: #2f4f4f;
+}
+#projects .project-title {
+	padding: 75px 0 30px 0;
+
+	color: #fff;
+
+	text-align: center;
+}
+#projects .cards {
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-gap: 20px;
+}
+#projects .cards .card {
+	display: block;
+
+	width: 100%;
+
+	position: relative;
+
+	transition: transform 300ms ease-in-out;
+
+	position: relative;
+}
+#projects .card:hover {
+	transform: translateY(-10px);
+}
+#projects .cards .card img {
+	max-width: 100%;
+	width: 300px;
+	min-height: 300px;
+	height: 100%;
+
+	border-radius: 6px;
+}
+#projects .cards .card figcaption {
+	position: absolute;
+
+	z-index: 2;
+
+	color: #fff;
+
+	font-size: 20px;
+
+	bottom: 0;
+
+	margin: 0 auto;
+
+	padding: 10px 0;
+
+	text-align: center;
+
+	width: 100%;
+
+	background: rgba(0, 0, 0, 0.9);
+}
+/*-----contact--------*/
+#contact {
+	color: #000;
+	display: flex;
+
+	min-height: 80vh;
+	align-items: center;
+	text-align: center;
+}
+
+#contact h2 {
+	margin-bottom: 0;
+	font-weight: 500;
+
+	/* transition: all 0.3s ease-in-out; */
+	transition: 400ms ease-in;
+}
+#contact p {
+	font-size: 1.3rem;
+	font-weight: 600;
+
+	padding-top: 10px;
+
+	transition: all 0.5s ease-in-out;
+	/* transition: 0.5s; */
+}
+p,
+h2 {
+	pointer-events: none;
+}
+
+#contact:hover h2 {
+	background: #fff;
+	color: blue;
+
+	border-radius: 20px;
+	padding: 10px 15px;
+
+	box-shadow: 3px 3px 8px 4px rgba(0, 0, 0, 0.8);
+}
+
+#contact:hover p {
+	transform: translateY(15px);
+}
+#contact ul {
+	padding: 0;
+
+	list-style-type: none;
+
+	font-size: 1.9rem;
+
+	width: 100%;
+}
+#contact ul li {
+	display: inline-block;
+
+	margin: 20px 40px 15px 0;
+
+	transition: all 0.5s ease-in-out;
+}
+#contact ul li:last-child {
+	margin-right: 0;
+}
+#contact ul li a {
+	text-decoration: none;
+
+	color: #171f1f;
+
+	font-weight: 500;
+}
+#contact ul li:hover {
+	background: #fff;
+
+	border-radius: 20px;
+
+	padding: 10px 20px;
+
+	box-shadow: 3px 3px 8px 4px rgba(0, 0, 0, 0.7);
+}
+/*-----footer--------*/
+footer {
+	width: 100%;
+	background: #dcdcdc;
+	border-top: 2px solid #8cc6c7;
+}
+footer .footer-content {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	min-height: 10vh;
+
+	pointer-events: none;
+}
+footer .footer-content .logo {
+	min-width: 80px;
+	margin-right: 20px;
+}
+footer .footer-content .logo img {
+	width: 100%;
+}
+/*-----media query------*/
+@media (max-width: 600px) {
+	.nav-content .logo {
+		max-width: 20%;
+	}
+
+	#welcome-section .container h1 {
+		text-align: center;
+		font-size: 2.8rem;
+	}
+
+	#contact .container h2 {
+		font-size: 2rem;
+	}
+	#contact .container p{
+		font-size: 1rem;
+	}
+
+	.nav-content ul li a {
+		/* padding: 8px; */
+		margin-right: 0px;
+		font-size: 1rem;
+
+		max-width: auto;
+	}
+
+	#contact ul{
+		font-size: 1.2rem;
+		font-weight: 700;
+	}
+
+	#projects .cards .card img {
+		width: auto;
+		height: 100%;
+
+		border-radius: 6px;
+
+		margin: 0 auto;
+		text-align: center;
+	}
+	.nav-content ul li {
+		position: relative;
+	}
+
+	.nav-content ul li::after{
+		content: "";
+		height: 3px;
+		
+		background: #333;
+		position: absolute;
+		top:30px;
+		left: 0px;
+		right: 0px;
+		bottom: 0;
+		
+		transform: scale(0,1);
+	
+		transition: transform 400ms ease-in-out;
+		
+	}
+	
+	.nav-content ul li:hover::after {
+		
+		transform-origin: left;
+		transform: scale(1,1);
+	}
+}
+@media (min-width: 600px) {
+	.nav-content ul {
+		font-size: 24px;
+	}
+	.nav-content ul li {
+		margin-right: 50px;
+
+		position: relative;
+	}
+	
+	#projects .cards {
+		grid-template-columns: 1fr 1fr;
+	}
+
+	#welcome-section .container h1 {
+		text-align: center;
+		font-size: 4rem;
+	}
+
+	#contact .container .project-title {
+		font-size: 3.5rem;
+	}
+
+}
+@media (min-width: 900px) {
+	#projects .cards {
+		grid-template-columns: 1fr 1fr 1fr;
+	}
+}
